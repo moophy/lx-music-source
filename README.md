@@ -8,7 +8,7 @@
 
 | 访问方式 | 清单地址 | 二维码 |
 |---|---|---|
-| 默认加速 · ghfast.top | [加载订阅](https://ghfast.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources.json) | [生成订阅二维码](https://quickchart.io/qr?text=https%3A%2F%2Fghfast.top%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fshellsec%2Flx-music-source%2Fmaster%2Fsources.json&size=320&margin=4) |
+| 默认加速 · ghfast.top | [加载订阅](https://ghfast.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources.ghfast.json) | [生成订阅二维码](https://quickchart.io/qr?text=https%3A%2F%2Fghfast.top%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fshellsec%2Flx-music-source%2Fmaster%2Fsources.ghfast.json&size=320&margin=4) |
 | 备用加速 · gh.monlor.com | [加载订阅](https://gh.monlor.com/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources.monlor.json) | [生成订阅二维码](https://quickchart.io/qr?text=https%3A%2F%2Fgh.monlor.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fshellsec%2Flx-music-source%2Fmaster%2Fsources.monlor.json&size=320&margin=4) |
 | 备用加速 · gh.acmsz.top | [加载订阅](https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources.acmsz.json) | [生成订阅二维码](https://quickchart.io/qr?text=https%3A%2F%2Fgh.acmsz.top%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fshellsec%2Flx-music-source%2Fmaster%2Fsources.acmsz.json&size=320&margin=4) |
 | GitHub 直连 | [加载订阅](https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources.direct.json) | [生成订阅二维码](https://quickchart.io/qr?text=https%3A%2F%2Fraw.githubusercontent.com%2Fshellsec%2Flx-music-source%2Fmaster%2Fsources.direct.json&size=320&margin=4) |

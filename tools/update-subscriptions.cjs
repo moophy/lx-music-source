@@ -8,6 +8,7 @@ const qr = url => `https://quickchart.io/qr?text=${encodeURIComponent(url)}&size
 for (const route of routes) {
   const data = { sources: manifest.sources.map(s => ({ ...s, url: route.base + relative(s) })) };
   fs.writeFileSync(path.join(root, route.file), JSON.stringify(data, null, 2) + '\n');
+  if (route === routes[0]) fs.writeFileSync(path.join(root, 'sources.json'), JSON.stringify(data, null, 2) + '\n');
 }
 let readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
 const subscriptions = '| 访问方式 | 清单地址 | 二维码 |\n|---|---|---|\n' + routes.map(r => {
