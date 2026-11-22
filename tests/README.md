@@ -41,6 +41,8 @@ node tools/probe-sources.cjs --output tests/latest-probe.json
 
 ## 记录文件
 
+订阅加速线路、生成命令及巡检方式见 [2026-11-22 线路检查](routes-2026-11-22.md)。
+
 停止服务音源的下架记录见 [retired-sources.json](retired-sources.json)。长青已从订阅和 README 移除，既有测试结果保持原样；历史脚本可通过记录中的提交恢复。
 
 最新批次为 [2026-11-21 全量巡检报告](refresh-2026-11-21.md)，完整证据见 [JSON](refresh-2026-11-21.json)，25 个现有音源的原始结果见 [全量检测](full-check-2026-11-21.json)。历史记录不改写；`latest-probe.json` 按脚本保留成功抽测快照，新条目的检测时间见 `testedAt`。

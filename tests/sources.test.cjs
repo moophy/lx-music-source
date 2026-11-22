@@ -7,7 +7,25 @@ const crypto = require('node:crypto');
 
 const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'sources.json'), 'utf8'));
-const prefix = 'https://gh-proxy.com/raw.githubusercontent.com/shellsec/lx-music-source/master/';
+const routes = require('../tools/source-routes.cjs');
+const prefix = routes[0].base;
+
+test('route subscriptions contain identical sources and use their own JS route', () => {
+  const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
+  assert.ok(!readme.includes('https://gh-proxy.com/'));
+  for (const route of routes) {
+    const alternate = JSON.parse(fs.readFileSync(path.join(root, route.file), 'utf8'));
+    assert.equal(alternate.sources.length, manifest.sources.length);
+    assert.ok(readme.includes(route.base + route.file));
+    assert.ok(readme.includes('text=' + encodeURIComponent(route.base + route.file)));
+    for (let i = 0; i < manifest.sources.length; i++) {
+      const source = manifest.sources[i];
+      const expected = route.base + source.url.slice(prefix.length);
+      assert.deepEqual(alternate.sources[i], { ...source, url: expected });
+      assert.ok(fs.statSync(path.join(root, decodeURIComponent(expected.slice(route.base.length)))).isFile());
+    }
+  }
+});
 
 test('manifest IDs are unique and URLs are HTTPS scripts', () => {
   assert.ok(Array.isArray(manifest.sources) && manifest.sources.length > 0);

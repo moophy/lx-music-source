@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "id": "appx64",
+      "name": "Appx64 Clear Music",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/appx64/Appx64%20Clear%20Music.js"
+    },
+    {
+      "id": "xinghai",
+      "name": "星海音乐源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/xinghai/%E6%98%9F%E6%B5%B7%E9%9F%B3%E4%B9%90%E6%BA%90.js"
+    },
+    {
+      "id": "yuxi",
+      "name": "屿溪-终章",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/yuxi/%E5%B1%BF%E6%BA%AA-%E7%BB%88%E7%AB%A0.js"
+    },
+    {
+      "id": "yuningxi",
+      "name": "lx-玉宁熙-Pro",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/yuningxi/lx-%E7%8E%89%E5%AE%81%E7%86%99-Pro.js"
+    },
+    {
+      "id": "fish-music",
+      "name": "fish_music",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/fish-music/fish_music.js"
+    },
+    {
+      "id": "animemusic",
+      "name": "lx-animemusic",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/animemusic/lx-animemusic.js"
+    },
+    {
+      "id": "hello-world",
+      "name": "𝖧౿ᥣᥣ𝗈 Ԝ𝗈𝗋ᥣᑯ",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/hello-world/%F0%9D%96%A7%E0%B1%BF%E1%A5%A3%E1%A5%A3%F0%9D%97%88%20%D4%9C%F0%9D%97%88%F0%9D%97%8B%E1%A5%A3%E1%91%AF.js"
+    },
+    {
+      "id": "molan",
+      "name": "墨澜聚合音源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/molan/%E5%A2%A8%E6%BE%9C%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90.js"
+    },
+    {
+      "id": "kxh",
+      "name": "K×H测试",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/kxh/K%C3%97H%E6%B5%8B%E8%AF%95.js"
+    },
+    {
+      "id": "jiexiang",
+      "name": "杰翔聚合音源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/jiexiang/%E6%9D%B0%E7%BF%94%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90.js"
+    },
+    {
+      "id": "hyw",
+      "name": "HYWmusic_公益版",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/hyw/HYWmusic_%E5%85%AC%E7%9B%8A%E7%89%88.js"
+    },
+    {
+      "id": "qdy",
+      "name": "全豆要[聚合音源]",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/qdy/%E5%85%A8%E8%B1%86%E8%A6%81%5B%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%5D.js"
+    },
+    {
+      "id": "grass",
+      "name": "野草🌾",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/grass/%E9%87%8E%E8%8D%89%F0%9F%8C%BE.js"
+    },
+    {
+      "id": "lx",
+      "name": "独家音源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/lx/%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90.js"
+    },
+    {
+      "id": "hei",
+      "name": "Hei Music聚合源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/hei/Hei%20Music%E8%81%9A%E5%90%88%E6%BA%90.js"
+    },
+    {
+      "id": "gd-studio",
+      "name": "gdstudio音乐源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/gd-studio/gdstudio%E9%9F%B3%E4%B9%90%E6%BA%90.js"
+    },
+    {
+      "id": "stellarwave",
+      "name": "星澜聚合音源 (StellarWave)",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/stellarwave/%E6%98%9F%E6%BE%9C%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%20(StellarWave).js"
+    },
+    {
+      "id": "annie",
+      "name": "安妮独家音源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/annie/%E5%AE%89%E5%A6%AE%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90.js"
+    },
+    {
+      "id": "huibi",
+      "name": "回避聚合 (HuiBi Aggregate)",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/huibi/%E5%9B%9E%E9%81%BF%E8%81%9A%E5%90%88%20(HuiBi%20Aggregate).js"
+    },
+    {
+      "id": "nianxin",
+      "name": "念心音源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/nianxin/%E5%BF%B5%E5%BF%83%E9%9F%B3%E6%BA%90.js"
+    },
+    {
+      "id": "kulao",
+      "name": "👖裤佬SVIP音源(二改整合版)",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/kulao/%F0%9F%91%96%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90(%E4%BA%8C%E6%94%B9%E6%95%B4%E5%90%88%E7%89%88).js"
+    },
+    {
+      "id": "feichangdao",
+      "name": "非常刀",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/feichangdao/%E9%9D%9E%E5%B8%B8%E5%88%80.js"
+    },
+    {
+      "id": "doubao",
+      "name": "豆包定制[聚合音源]",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/doubao/%E8%B1%86%E5%8C%85%E5%AE%9A%E5%88%B6%5B%E8%81%9A%E5%90%88%E9%9F%B3%E6%BA%90%5D.js"
+    },
+    {
+      "id": "stellarwave-new",
+      "name": "新星澜音乐源",
+      "url": "https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/stellarwave-new/%E6%96%B0%E6%98%9F%E6%BE%9C%E9%9F%B3%E4%B9%90%E6%BA%90.js"
+    }
+  ]
+}
