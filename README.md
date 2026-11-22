@@ -13,7 +13,7 @@
 | 备用加速 · gh.acmsz.top | [加载订阅](https://gh.acmsz.top/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources.acmsz.json) | [生成订阅二维码](https://quickchart.io/qr?text=https%3A%2F%2Fgh.acmsz.top%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2Fshellsec%2Flx-music-source%2Fmaster%2Fsources.acmsz.json&size=320&margin=4) |
 | GitHub 直连 | [加载订阅](https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources.direct.json) | [生成订阅二维码](https://quickchart.io/qr?text=https%3A%2F%2Fraw.githubusercontent.com%2Fshellsec%2Flx-music-source%2Fmaster%2Fsources.direct.json&size=320&margin=4) |
 
-默认订阅使用 ghfast.top；每条备用订阅内部的 JS 地址也使用对应线路，GitHub 直连订阅内部全部使用直连地址。某条线路不可用时，请切换整条订阅。旧版 gh-proxy.com 地址已停用，请更新订阅入口。
+根目录 sources.json 使用 GitHub 直连地址，原有 raw 订阅可以继续加载。加速订阅使用独立清单，清单内的 JS 地址也使用对应线路。某条线路不可用时，请切换整条订阅。旧版 gh-proxy.com 地址已停用，请更新订阅入口。
 
 外部加载器读取清单中的 `id`、`name` 和 `url`，通过 `url` 下载对应的 JS 脚本。建议以稳定的 `id` 识别音源，每次更新重新读取清单中的地址。
 

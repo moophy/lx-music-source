@@ -8,11 +8,14 @@ const crypto = require('node:crypto');
 const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'sources.json'), 'utf8'));
 const routes = require('../tools/source-routes.cjs');
-const prefix = routes[0].base;
+const direct = routes.find(route => route.id === 'direct');
+const prefix = direct.base;
 
 test('route subscriptions contain identical sources and use their own JS route', () => {
   const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   assert.ok(!readme.includes('https://gh-proxy.com/'));
+  assert.deepEqual(manifest, JSON.parse(fs.readFileSync(path.join(root, 'sources.direct.json'), 'utf8')));
+  assert.ok(manifest.sources.every(source => source.url.startsWith(prefix)));
   for (const route of routes) {
     const alternate = JSON.parse(fs.readFileSync(path.join(root, route.file), 'utf8'));
     assert.equal(alternate.sources.length, manifest.sources.length);
