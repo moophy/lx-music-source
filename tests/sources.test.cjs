@@ -14,6 +14,8 @@ const prefix = direct.base;
 test('route subscriptions contain identical sources and use their own JS route', () => {
   const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
   assert.ok(!readme.includes('https://gh-proxy.com/'));
+  assert.ok(readme.includes('| 音源 | JS 直连地址 | JS 加速地址 |'));
+  assert.ok(readme.indexOf(direct.base + direct.file) < readme.indexOf(routes.find(route => route.id === 'ghfast').base));
   assert.deepEqual(manifest, JSON.parse(fs.readFileSync(path.join(root, 'sources.direct.json'), 'utf8')));
   assert.ok(manifest.sources.every(source => source.url.startsWith(prefix)));
   for (const route of routes) {
