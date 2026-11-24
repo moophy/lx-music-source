@@ -1,0 +1,60 @@
+{
+  "testedAt": "2026-11-24T12:51:30.278Z",
+  "results": [
+    {
+      "file": "tests\\.doubao-candidate.js",
+      "name": "豆包定制[聚合音源]",
+      "sha256": "b421e6f4b33d7823b0f70a6065d5af46fec952be356b11fa4af7335444244a2e",
+      "initialized": true,
+      "attempts": [
+        {
+          "source": "wy",
+          "id": "186016",
+          "quality": "128k",
+          "error": "BUDGET_EXHAUSTED: 所有源均失败 [[128k] BUDGET_EXHAUSTED: 竞速预算耗尽(4999ms)]"
+        },
+        {
+          "source": "kw",
+          "id": "228908",
+          "quality": "128k",
+          "resolved": true,
+          "status": 206,
+          "bytes": 8192,
+          "audio": true,
+          "contentType": "audio/mpeg"
+        },
+        {
+          "source": "tx",
+          "id": "97773",
+          "quality": "128k",
+          "resolved": true,
+          "status": 206,
+          "bytes": 8192,
+          "audio": true,
+          "contentType": "audio/mpeg"
+        },
+        {
+          "source": "kg",
+          "id": "32100650",
+          "quality": "128k",
+          "error": "BUDGET_EXHAUSTED: 所有源均失败 [[128k] 溯音酷我: BUDGET_EXHAUSTED: 单源超出预算(5000ms)]"
+        },
+        {
+          "source": "mg",
+          "id": "3790007",
+          "quality": "128k",
+          "error": "BUDGET_EXHAUSTED: 所有源均失败 [[128k] 溯音酷我: BUDGET_EXHAUSTED: 单源超出预算(5000ms)]"
+        }
+      ],
+      "errors": [],
+      "platforms": [
+        "wy",
+        "tx",
+        "kw",
+        "kg",
+        "mg",
+        "au"
+      ]
+    }
+  ]
+}

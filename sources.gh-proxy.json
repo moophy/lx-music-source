@@ -66,11 +66,6 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/grass/%E9%87%8E%E8%8D%89%F0%9F%8C%BE.js"
     },
     {
-      "id": "lx",
-      "name": "独家音源",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/lx/%E7%8B%AC%E5%AE%B6%E9%9F%B3%E6%BA%90.js"
-    },
-    {
       "id": "hei",
       "name": "Hei Music聚合源",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/hei/Hei%20Music%E8%81%9A%E5%90%88%E6%BA%90.js"
@@ -104,11 +99,6 @@
       "id": "kulao",
       "name": "👖裤佬SVIP音源(二改整合版)",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/kulao/%F0%9F%91%96%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90(%E4%BA%8C%E6%94%B9%E6%95%B4%E5%90%88%E7%89%88).js"
-    },
-    {
-      "id": "feichangdao",
-      "name": "非常刀",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/shellsec/lx-music-source/master/sources/feichangdao/%E9%9D%9E%E5%B8%B8%E5%88%80.js"
     },
     {
       "id": "doubao",

@@ -9,6 +9,26 @@
       "evidence": "full-check-2026-11-21.json",
       "previousFile": "sources/changqing/长青SVIP音源(二改修复版).js",
       "previousCommit": "2388ef6c97a958abe7cb3417e5691d4e3322af3f"
+    },
+    {
+      "id": "lx",
+      "name": "独家音源",
+      "removedOn": "2026-11-24",
+      "reason": "Both runs failed all samples; pdone removed its LX distribution after a safety report (issue #16).",
+      "sha256": "79a5c4703e060eaff6f8ffaac05d2fadf5e22b7729f6fe151d1cca2fa3935171",
+      "evidence": "recheck-2026-11-24.json",
+      "previousFile": "sources/lx/独家音源.js",
+      "previousCommit": "b9ab4bb"
+    },
+    {
+      "id": "feichangdao",
+      "name": "非常刀",
+      "removedOn": "2026-11-24",
+      "reason": "Both runs failed all five samples.",
+      "sha256": "49486cab064e64d5ad63723e670c44ee55eadadcc790ccf493351fbde64284d7",
+      "evidence": "recheck-2026-11-24.json",
+      "previousFile": "sources/feichangdao/非常刀.js",
+      "previousCommit": "b9ab4bb"
     }
   ]
 }
