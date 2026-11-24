@@ -5,7 +5,7 @@
     {
       "file": "sources/appx64/Appx64 Clear Music.js",
       "name": "Appx64 Clear Music",
-      "sha256": "ae24e896cd6a60e3a7588630c468efc8cc4a96ccc5ace4fb676082f26e83189a",
+      "sha256": "05c6a5540746b9e618fe925536139bd2ffc8cc2f60aa7277a253bff5417b0166",
       "initialized": true,
       "attempts": [
         {
@@ -28,7 +28,7 @@
           "source": "tx",
           "id": "97773",
           "quality": "128k",
-          "error": "No verified tx/128k stream. qqOfficial: QQ official returned no permitted stream; xinghai: HTTP 403; vkeys: Audio duration differs from the selected song"
+          "error": "No verified tx/128k stream. qqOfficial: QQ official returned no permitted stream; tang: Network request failed; vkeys: No playback URL; xinghai: 该音源仅支持当前已授权的客户端访问，请使用星海 App 或网页端"
         },
         {
           "source": "kg",
@@ -59,7 +59,7 @@
         "kg",
         "mg"
       ],
-      "testedAt": "2026-11-21T13:54:52.782Z"
+      "testedAt": "2026-11-24T12:56:31.382Z"
     },
     {
       "file": "sources/changqing/长青SVIP音源(二改修复版).js",

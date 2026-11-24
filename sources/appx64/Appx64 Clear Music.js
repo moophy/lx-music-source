@@ -1,8 +1,8 @@
 /**
  * @name Appx64 Clear Music
  * @description ID-based requests, verified audio
- * @version 2026.10.13
- * @author appx64.com
+ * @version 2026.11.10
+ * @author Local
  */
 
 'use strict';
@@ -16,7 +16,8 @@ const CONFIG = {
   verifyAudio: true,
   debug: false,
   qqCookie: '',
-  backends: { gd: true, xinghai: true, kuwoOfficial: true, wwwweb: true, qqOfficial: true, vkeys: true },
+  license: '',
+  backends: { gd: true, xinghai: true, kuwoOfficial: true, wwwweb: true, tang: true, qqOfficial: true, vkeys: true },
 };
 
 const { EVENT_NAMES, request, on, send, env } = globalThis.lx;
@@ -31,6 +32,11 @@ const NAMES = { wy: 'Netease', tx: 'QQ Music', kw: 'Kuwo', kg: 'Kugou', mg: 'Mig
 const cache = new Map();
 const inflight = new Map();
 const health = new Map();
+const deviceId = 'lx-online-' + Math.random().toString(36).slice(2, 8) + Date.now().toString(36).slice(-4);
+const TOKEN_TTL = 4 * 60 * 1000;
+let serverToken = '';
+let tokenAt = 0;
+let tokenPromise = null;
 
 function log(message) {
   if (CONFIG.debug) console.log('[Clear Music] ' + message);
@@ -253,6 +259,48 @@ async function json(url, options, job) {
   return data;
 }
 
+async function ensureToken(force) {
+  if (!force && serverToken && Date.now() - tokenAt <= TOKEN_TTL) return serverToken;
+  if (!tokenPromise) tokenPromise = (async () => {
+    const data = await json('https://yy.zddyr.top/lx/api/token.php?device_id=' + encodeURIComponent(deviceId), {}, { deadline: Date.now() + 8000 });
+    const token = data && data.data && data.data.token;
+    if (typeof token !== 'string' || !token) throw new Error('Server token unavailable');
+    return token;
+  })();
+  try {
+    serverToken = await tokenPromise;
+    tokenAt = Date.now();
+    return serverToken;
+  } finally {
+    tokenPromise = null;
+  }
+}
+
+async function xinghaiJson(params, job) {
+  let refreshed = false;
+  for (;;) {
+    const token = await ensureToken(refreshed);
+    const headers = { 'X-Token': token, 'X-Client': 'Appx64 Clear Music/2026.11.10' };
+    if (CONFIG.license.trim()) headers['X-License'] = CONFIG.license.trim();
+    let data;
+    try {
+      data = await json('https://yy.zddyr.top/lx/api/?' + query(params), { headers }, job);
+    } catch (error) {
+      if (!refreshed && /HTTP 403/.test(error.message)) { refreshed = true; serverToken = ''; tokenAt = 0; continue; }
+      throw error;
+    }
+    if (Number(data.code) === 200 && data.url) return data;
+    const auth = data.auth || {};
+    if (!refreshed && (Number(data.code) === 403 || auth.tk_mismatch === true || auth.device_id === 'untrusted-token' || auth.tk_error)) {
+      refreshed = true;
+      serverToken = '';
+      tokenAt = 0;
+      continue;
+    }
+    throw new Error(data.msg ? String(data.msg).slice(0, 80) : 'Backend did not resolve the song');
+  }
+}
+
 async function verify(url, quality, expectedDuration, job) {
   if (!CONFIG.verifyAudio) return null;
   // LX buffers the response before calling back; the timer limits time, not bytes.
@@ -314,9 +362,17 @@ const BACKENDS = {
         params.albumName = pick(info, ['albumName', 'album']);
         params.interval = pick(info, ['interval']);
       }
-      const data = await json('https://yy.zddyr.top/lx/api/?' + query(params), {}, job);
-      if (Number(data.code) !== 200) throw new Error('Backend did not resolve the song');
+      const data = await xinghaiJson(params, job);
       return urlValue(data.url);
+    },
+  },
+  tang: {
+    sources: ['tx'],
+    async fetch(source, id, quality, info, job) {
+      if (!/^[A-Za-z0-9]{14}$/.test(id)) throw new Error('QQ needs a string songmid');
+      // This endpoint exposes one lossless stream; it can satisfy any lower requested tier.
+      const data = await json('https://tang.api.s01s.cn/music_open_api.php?' + query({ mid: id }), {}, job);
+      return urlValue(data.song_play_url_sq || data.song_play_url_pq);
     },
   },
   kuwoOfficial: {
@@ -364,7 +420,7 @@ const BACKENDS = {
     },
   },
 };
-const ORDER = { wy: ['gd', 'wwwweb'], tx: ['qqOfficial', 'xinghai', 'vkeys'], kw: ['xinghai', 'kuwoOfficial'], kg: ['xinghai'], mg: ['xinghai'] };
+const ORDER = { wy: ['gd', 'wwwweb'], tx: ['qqOfficial', 'tang', 'vkeys', 'xinghai'], kw: ['xinghai', 'kuwoOfficial'], kg: ['xinghai'], mg: ['xinghai'] };
 
 async function resolveMusic(source, info, quality) {
   if (!QUALITIES[source]) throw new Error('Unsupported music platform');
